@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tochka.</title>
+</head>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#1e1e1e,#323236,#1e1e1e, #323236, #1e1e1e,#323236,#1e1e1e);
+    background-size: 400% 650%;
+    background-attachment: fixed;
+    animation: bganimation 25s ease infinite;
+    font-family: sans-serif;
+    padding: 100px 100px;
+}
+
+@keyframes bganimation {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 100% 100%; }
+}
+
+.box {
+    background: rgb(255, 255, 255, 0.05);
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeUp 0.6s ease both;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50%       { transform: scale(1.06); }
+}
+
+h1 {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 14px;
+    margin-bottom: 36px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.btn {
+    display: block;
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.07);
+    transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease;
+    animation: fadeUp 0.6s ease both;
+}
+
+.btn:nth-child(1) { animation-delay: 0.1s; }
+.btn:nth-child(2) { animation-delay: 0.2s; }
+.btn:nth-child(3) { animation-delay: 0.3s; }
+.btn:nth-child(4) { animation-delay: 0.4s; }
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.btn.instagram { border-left: 3px solid #787878; }
+.btn.tiktok    { border-left: 3px solid #9b9b9b; }
+.btn.telegram  { border-left: 3px solid #b1b1b1; }
+.btn.discord   { border-left: 3px solid #dbdbdb; }
+
+.footer {
+    margin-top: 24px;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+
+<body>
+
+  <div class="box">
+    <img src="https://cdn.discordapp.com/attachments/1484837637926682667/1517202827934564513/photo_2026-06-18_21-22-06.jpg?ex=6a356cbe&is=6a341b3e&hm=b90406a491d0bfac21f41cacb5418000354187cf465ff1114669798e29b82259&" alt="Avatar" class="avatar">
+    <h1>tochka</h1>
+    <p class="subtitle">Contact me on any of these platforms</p>
+    <div class="links">
+      <a href="https://t.me/tochka_navsegda" class="btn telegram">Telegram</a>
+      <a href="https://www.tiktok.com/@_tochka_77?_r=1&_t=ZS-97DEpyqZOke" class="btn tiktok">TikTok</a>
+      <a href="https://www.instagram.com/a__ars1an_?igsh=MXFoMTdteHRkemZ5bg==" class="btn instagram">Instagram</a>
+      <a href="https://discord.gg/9EuBVFGP" class="btn discord">Discord</a>
+    </div>
+  </div>
+
+  <p class="footer">© 2026 tochka.</p>
+
+</body>
+</html>
